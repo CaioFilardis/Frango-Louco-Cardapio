@@ -1,0 +1,40 @@
+#statusEstabelecimento {
+    position: fixed;
+    top: 20px;       /* Espaçamento do topo da página */
+    left: 20px;      /* Espaçamento da margem esquerda */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.6em;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    max-width: 200px;
+    text-align: center;
+    background-color: var(--color-black);
+}
+
+
+
+@media (max-width: 768px) {
+    #statusEstabelecimento {
+        top: 10px;             
+        left: 10px;            
+        font-size: 0.5em;        
+        padding: 8px;          
+        width: auto;           
+        max-width: 80%;        
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Media query para telas muito pequenas (smartphones menores) */
+@media (max-width: 480px) {
+    #statusEstabelecimento {
+        top: 5px;
+        left: 5px;
+        font-size: 0.5em;
+        padding: 6px;
+        max-width: 90%;
+    }
+}
