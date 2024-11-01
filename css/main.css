@@ -171,14 +171,13 @@ b {
     top: -80px;
 }
 
-.img-banner1 img {
+/* .img-banner1 video source {
     border-radius: 10px;
     position: absolute;
-    width: 410px;
+    width: 10px;
     bottom: 100px;
-   /*  top: 50px; */
     right: 20px;
-}
+} */
 
 .img-banner img {
     border-radius: 100px;
