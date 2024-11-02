@@ -1,5 +1,6 @@
 const horarioAberto = 9; // 9:00 AM
 const horarioFechado = 14; // 14:00 AM
+let estabelecimentoAberto = false;
 
 // Verificar status exibido
 function verificarStatusEstabelecimento() {
@@ -12,9 +13,11 @@ function verificarStatusEstabelecimento() {
     if (horaAtual > horarioAberto && horaAtual < horarioFechado) {
         status.textContent = "Aberto";
         status.style.color = "green";
+        estabelecimentoAberto = true;
     } else {
         status.textContent = "Fechado";
         status.style.color = "red";
+        estabelecimentoAberto = false;
     }
 }
 

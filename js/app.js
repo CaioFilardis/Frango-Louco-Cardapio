@@ -25,6 +25,12 @@ cardapio.metodos = {
     
     obterItensCardapio: (categoria = 'burgers', vermais = false) => { // método que obtem a lista do cardápio
 
+        if (!estabelecimentoAberto) {
+            cardapio.metodos.mensagemGlobal("O estabelecimento está fechado. Não é possível visualizar o cardápio", 'red');
+            return;
+        } 
+
+
         // realizando um filtro no menu, selecionando o menu
         var filtro = MENU[categoria];
         console.log(filtro);
@@ -96,7 +102,16 @@ cardapio.metodos = {
     }, 
 
     adicionarCarrinho: (id) => { // adicionar ao carrinho a quantidade do item do cardápio
+        
+        
+        if (!estabelecimentoAberto) {
+            cardapio.metodos.mensagemGlobal("O estabelecimento está fechado. Não é possível visualizar o cardápio", 'red');
+            return;
+        } 
+        
+        
         let quantidadeAtual = parseInt($("#qntd-" + id).text()); 
+
        
         if (quantidadeAtual > 0) {
 
@@ -155,6 +170,12 @@ cardapio.metodos = {
     
     // abrir a modal de carrinho
     abrirCarrinho: (abrir) => {
+
+
+        if (!estabelecimentoAberto) {
+            cardapio.metodos.mensagemGlobal("O estabelecimento está fechado. Não é possível visualizar o cardápio", 'red');
+            return;
+        } 
 
         if (abrir) {
             $("#modalCarrinho").removeClass('hidden'); // aparecer a modalCarrinho
@@ -230,6 +251,11 @@ cardapio.metodos = {
 
     // carrega a lista de itens do carrinho
     carregarCarrinho: () => {
+
+        if (!estabelecimentoAberto) {
+            cardapio.metodos.mensagemGlobal("O estabelecimento está fechado. Não é possível visualizar o cardápio", 'red');
+            return;
+        } 
 
         cardapio.metodos.carregarEtapa(1); // chamando o método carregarEtapa
 
