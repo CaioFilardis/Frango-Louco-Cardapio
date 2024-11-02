@@ -10,7 +10,7 @@ function verificarStatusEstabelecimento() {
     const status = document.getElementById("statusEstabelecimento");
 
 
-    if (horaAtual > horarioAberto && horaAtual < horarioFechado) {
+    if (horaAtual >= horarioAberto && horaAtual < horarioFechado) {
         status.textContent = "Aberto";
         status.style.color = "green";
         estabelecimentoAberto = true;
