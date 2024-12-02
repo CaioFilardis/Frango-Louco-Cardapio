@@ -1,5 +1,5 @@
 const horarioAberto = 9; // 9:00 AM
-const horarioFechado = 14; // 14:00 AM
+const horarioFechado = 20; // 14:00 AM
 let estabelecimentoAberto = false;
 
 // Verificar status exibido
