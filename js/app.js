@@ -8,7 +8,7 @@ var meuEndereco = null; // ou seja, um valor sem linkagem(armazenamento) na mem√
 
 var valorCarrinho = 0;
 var valorEntrega = 5;
-var celularEmpresa = '5521995865044';
+var celularEmpresa = '5521995291891';
 
 cardapio.eventos = { // criando um objeto
 
