@@ -859,3 +859,78 @@ select.form-control {
     border-radius: 50px;
     margin-bottom: 10px;
 }
+
+/* Estilo de Impressão */
+@media print {
+    /* Remove elementos desnecessários para impressão */
+    body {
+        font-family: 'PoppinsRegular', sans-serif;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    header, footer, .no-print, #container-mensagens {
+        display: none;
+    }
+
+    .container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    #resumoCarrinho {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    .title-carrinho {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .item-carrinho {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+
+    .item-carrinho:last-child {
+        border-bottom: none;
+    }
+
+    .img-produto-resumo img {
+        width: 60px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .dados-produto {
+        flex: 1;
+        padding: 0 10px;
+    }
+
+    .price-produto-resumo {
+        font-size: 1.2em;
+        color: #000;
+    }
+
+    .quantidade-produto-resumo {
+        font-size: 1.2em;
+        text-align: right;
+    }
+
+    .resumo-endereco {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px dashed #000;
+        border-radius: 5px;
+        font-size: 1.1em;
+    }
+}
